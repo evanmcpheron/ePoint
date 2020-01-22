@@ -1,0 +1,85 @@
+input,
+textarea {
+	width: 90%;
+	height: 4rem;
+	padding: 2rem;
+	box-sizing: border-box;
+	margin-left: 5%;
+	margin-bottom: 2rem;
+}
+
+textarea {
+    height: 10rem;
+    resize: none;
+}
+
+.signin-page-wrapper {
+	width: 50%;
+	height: auto;
+	background: #dfdfdf;
+	border-radius: 5px;
+	box-shadow: 0 0 12px 5px rgba(0, 0, 0, 0.2);
+	display: grid;
+	grid-template-columns: 1fr;
+	padding: 3rem;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+    h1 {
+        margin-bottom: 2rem;
+    }
+}
+
+.signin-base-wrapper {
+	display: flex;
+	justify-content: space-around;
+	font-size: 1.25rem;
+
+	@include link();
+	color: lighten($black, 30%);
+	.nav-link-wrapper {
+		a {
+			&:hover {
+				color: $purp;
+			}
+		}
+
+		.active {
+			color: $purp;
+		}
+	}
+}
+
+button {
+	width: 20rem;
+	height: 4rem;
+	border: none;
+    background-color: transparent;
+    border: $purp solid 2px;
+	border-radius: 5px;
+	margin-bottom: 4rem;
+	transition: all 0.4s ease;
+	&:hover {
+		background-color: $purp-20;
+        color: $white;
+        cursor: pointer;
+	}
+}
+
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../static/assets/img/Code-stripped.png');
+    background-position: top;
+    background-size: cover;
+    z-index: -999;
+    opacity: .05;
+    
+}

@@ -1,0 +1,65 @@
+@mixin link {
+	.nav-link-wrapper {
+		text-transform: uppercase;
+		transition: all 0.5s ease;
+		position: relative;
+
+		a + span::after {
+			content: "";
+			width: 0;
+			height: 1px;
+			background: $secondary;
+			position: absolute;
+			z-index: 1;
+			margin-left: 50%;
+			bottom: 0;
+			left: 0;
+			transition: all 0.3s cubic-bezier(0.755, 0.265, 0.47, 0.825);
+		}
+
+		a:hover + span::after {
+			content: "";
+			width: 90%;
+			height: 3px;
+			background: $secondary;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			z-index: 1;
+			margin-left: 5%;
+			margin-bottom: -0.5rem;
+		}
+
+		a {
+			text-decoration: none;
+			color: $black;
+			transition: all 0.5s ease;
+
+			&:hover {
+				color: $purp-60;
+			}
+		}
+
+		.active {
+			color: $purp-60;
+		}
+
+		.active span {
+			width: 100%;
+			background: $purp-60;
+		}
+
+		.active + span::after {
+			content: "";
+			width: 90%;
+			height: 3px;
+			background: $secondary;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			z-index: 1;
+			margin-left: 5%;
+			margin-bottom: -0.5rem;
+		}
+	}
+}

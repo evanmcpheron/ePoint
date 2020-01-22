@@ -1,0 +1,51 @@
+.home-page-wrapper {
+	width: 80%;
+	position: relative;
+
+	.home-header {
+		display: flex;
+		// background: $white;
+        position: relative;
+        height: 80vh;
+	}
+
+	.left-side {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&-container {
+			width: 75%;
+			font-size: 1.3rem;
+
+			h1 {
+				color: $secondary;
+                font-size: 3rem;
+                text-align: right;
+			}
+
+			h2 {
+                margin-top: 1rem;
+                text-align: right;
+			}
+			.subscribe-form {
+				display: flex;
+				margin-top: 2.5rem;
+
+				input {
+					margin-left: 0;
+					margin-right: 1rem;
+				}
+			}
+		}
+	}
+
+	.right-side {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+		img {
+			width: 50%;
+		}
+	}
+}

@@ -1,0 +1,35 @@
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient($purp, $purp-20);
+    width: 100vw;
+    font-size: 2rem;
+    height: 8rem;
+    
+    .left-side {
+        display: flex;
+        text-align: center;
+        color: $white;
+
+        a {
+            border-bottom: 2px solid transparent;
+            position: relative;
+        }
+    }
+
+    .right-side {
+        display: flex;
+        text-align: center;
+    }
+
+    @include link();
+
+
+}
+
+.oneRem {
+    width: 1.5em;
+    height: 1rem;
+    position: relative;
+}
